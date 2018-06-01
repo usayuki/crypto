@@ -10,8 +10,8 @@ import javax.crypto.spec.SecretKeySpec
 
 
 fun main(args: Array<String>) {
-  val fis = FileInputStream("./hoge.byte")
-  val key = SecretKeySpec("mzw7zb856re2rr9z".toByteArray(), "AES")
+  val fis = FileInputStream("./encrypto.byte")
+  val key = SecretKeySpec("0123456789ABCDEF".toByteArray(), "AES")
   val iv = ByteArray(16)
   fis.read(iv)
   val cipher = Cipher.getInstance("AES/CBC/PKCS5Padding")
@@ -20,7 +20,7 @@ fun main(args: Array<String>) {
   val cis = CipherInputStream(fis, cipher)
   val reader = cis.bufferedReader()
 
-  val file = File("./decrypto.json")
+  val file = File("./after.json")
   val fw = FileWriter(file)
   var line: String? = reader.readLine()
   while (line != null) {

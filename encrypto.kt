@@ -9,11 +9,11 @@ import javax.crypto.spec.SecretKeySpec
 
 
 fun main(args: Array<String>) {
-  val fis = FileInputStream("./hoge.json")
-  val key = SecretKeySpec("mzw7zb856re2rr9z".toByteArray(), "AES")
+  val fis = FileInputStream("./before.json")
+  val key = SecretKeySpec("0123456789ABCDEF".toByteArray(), "AES")
   val cipher = Cipher.getInstance("AES/CBC/PKCS5Padding")
   cipher.init(Cipher.ENCRYPT_MODE, key)
-  val fos = FileOutputStream("./hoge.byte")
+  val fos = FileOutputStream("./encrypto.byte")
   val cos = CipherOutputStream(fos, cipher)
   fos.write(cipher.getIV())
   val a = ByteArray(8)
