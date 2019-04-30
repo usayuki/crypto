@@ -1,6 +1,6 @@
 import Foundation
 
-let inputUrl: URL = URL(fileURLWithPath: "/Users/ishikawamasayuki/Desktop/crypto/package.byte")
+let inputUrl: URL = URL(fileURLWithPath: "/Users/usayuki/Desktop/crypto/package.byte")
 let inputData = try! Data(contentsOf: inputUrl)
 let key = "mzw7zb856re2rr9z".data(using: .utf8)!
 let keyLength = key.count
@@ -35,6 +35,6 @@ if validKeyLengths.contains(keyLength) {
   } else {
     print("Decryption failed:", cryptStatus)
   }
-  let outputUrl: URL = URL(fileURLWithPath: "/Users/ishikawamasayuki/Desktop/crypto/output.json")
+  let outputUrl: URL = URL(fileURLWithPath: "/Users/usayuki/Desktop/crypto/output.json")
   try clearData.write(to: outputUrl)
 }
