@@ -1,6 +1,6 @@
 import Foundation
 
-let inputUrl: URL = URL(fileURLWithPath: "/Users/ishikawamasayuki/Desktop/crypto/package.json")
+let inputUrl: URL = URL(fileURLWithPath: "/Users/usayuki/Desktop/crypto/package.json")
 let inputData = try! Data(contentsOf: inputUrl)
 let key = "mzw7zb856re2rr9z".data(using: .utf8)!
 let keyLength = key.count
