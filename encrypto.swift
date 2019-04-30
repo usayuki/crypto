@@ -39,7 +39,7 @@ if validKeyLengths.contains(keyLength) {
     } else {
       print("Encryption failed")
     }
-    let outputUrl: URL = URL(fileURLWithPath: "/Users/ishikawamasayuki/Desktop/crypto/package.byte")
+    let outputUrl: URL = URL(fileURLWithPath: "/Users/usayuki/Desktop/crypto/package.byte")
     try cryptData.write(to: outputUrl)
   }
 }
